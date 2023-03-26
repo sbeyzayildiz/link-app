@@ -25,11 +25,13 @@ export const LinksSlice = createSlice({
             const linkId = action.payload;
             const findLink = state.items.find((link) => link.id === linkId);
             findLink.vote = findLink.vote - 1;
+            localStorage.setItem('links', JSON.stringify(state.items));
         },
         upVoteLink: (state, action) => {
             const linkId = action.payload;
             const findLink = state.items.find((link) => link.id === linkId);
             findLink.vote = findLink.vote + 1;
+            localStorage.setItem('links', JSON.stringify(state.items));
         },
         sortByDate: (state) => {
             state.items.sort((a, b) => {
