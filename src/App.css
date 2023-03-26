@@ -1,38 +1,114 @@
 .App {
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+}
+
+/* Link List Component */
+
+.link-list-container {
+  width: 70vw;
+  margin: 2rem;
+}
+
+.link-list-container header {
+  font-size: 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link-list-container .sorter {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link-list-container .sorter button {
+  margin-left: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link-list-container .list {
+  
+}
+
+.link-list-container .ant-list-item {
+  padding: 8px 0;
+}
+
+.link-list-container .ant-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.list-item-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.list-item-left:hover {
+  color: #1677ff;
+  cursor: pointer;
+}
+
+.list-item-title {
+ font-size: 1.3rem;
+ padding: 8px 21px;
+}
+
+.delete-button {
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: -21px;
+}
+
+.delete-button:hover {
+  display: block;
+}
+
+.list-item-title:hover + .delete-button{
+  display: block;
+}
+
+.list-item-right {
+  display: flex;
+  align-items: center;
+}
+
+.vote-title {
+  margin: 0 8px;
+  font-size: 1rem;
+}
+
+
+/* Link Add Component */
+
+.link-add-container {
+  width: 70vw;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.link-add-container header {
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link-add-container form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-add-container .ant-form-item {
+  width: 100%;
+}
+
+.link-add-container button[type='submit'] {
+  text-align: center;
 }
